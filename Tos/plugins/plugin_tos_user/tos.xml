@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="user">
+	<name>TOS - User</name>
+	<author>Ammonite Networks</author>
+	<creationDate>January 2013</creationDate>
+	<copyright>Copyright (C) 2005 - 2012 Open Source Matters. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>chris@ammonitenetworks.com</authorEmail>
+	<authorUrl>www.ammonitenetworks.com</authorUrl>
+	<version>2.5.0</version>
+	<description>Requires a user to accept terms and Conditions at login.</description>
+
+	<files>
+		<filename plugin="tos.php">tos.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="scope_id"
+					type="text"
+					default="1"
+					description="Scope ID"
+					label="Scope ID">
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+
+</extension>
