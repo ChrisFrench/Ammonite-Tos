@@ -8,16 +8,14 @@
 */
 
 /** ensure this file is being included by a parent file */
-defined( '_JEXEC' ) or die( 'Restricted access' );
+defined( '_JEXEC' ) or die( 'Restricted access' ); ?>
 
 <form class="form-inline center page" action="<?php echo $this->action; ?>" method="post" name="terms" id="terms">
 
 <div>
 	
 	<h1><?php echo $this->row->terms_title; ?></h1>
-		<br />
-	
-		<br />
+
 	<div class="row ">
 		<div class="termsWrapper center  page " style="height:400px;overflow: auto;" style=""> <div style="" class="text">
 		<?php echo $this->row->terms; ?>
@@ -29,7 +27,11 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 	<br />
 	<div class="row ">	
 		
-  
+  <?php if(@$this->accepted && JFactory::getUser()->id) : ?>
+
+<div class="alert alert-success"> You can already accepted these terms.</div>
+
+<?php elseif(JFactory::getUser()->id) : ?>
   <label class="checkbox">
 				<input type="checkbox" name="terms" id="terms" onClick="apply()" >
 				I Agree to Terms & Conditions above</br> </label>
@@ -41,9 +43,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
   <input name="terms_id" type="hidden" value="<?php echo $this->row->terms_id; ?>">
   <input name="scope_id" type="hidden" value="<?php echo $this->row->scope_id; ?>">
 </form>
-	</div>
-</div>
-
+	
 <script type="text/javascript">
 function apply()
 {
@@ -58,6 +58,9 @@ function apply()
   }
 }
 </script> 
+<?php endif; ?>
+</div>
+</div>
 
 <?php /* we all hate hard coded onCLick events but for sake of usefuliness
 Same script with  jQuery 

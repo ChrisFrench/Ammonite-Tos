@@ -1,4 +1,3 @@
 misc
 ====
-
-Holds misc projects (in branches) that don't deserve their own repository...
+Tos adds terms of service options to joomla

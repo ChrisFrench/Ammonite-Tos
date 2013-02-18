@@ -37,8 +37,8 @@ class TosControllerTerms extends TosController
         $state = array();
 
         $state['filter_terms_title']       = $app->getUserStateFromRequest($ns.'terms_title', 'filter_terms_title', '', '');
-        $state['filter_terms']       = $app->getUserStateFromRequest($ns.'terms', 'filter_terms', '', '');
-        $state['filter_scope_id']       = $app->getUserStateFromRequest($ns.'scope_id', 'filter_scope_id', '', '');
+        $state['filter_terms']       =      $app->getUserStateFromRequest($ns.'terms', 'filter_terms', '', '');
+        $state['filter_scope_id']       =       $app->getUserStateFromRequest($ns.'scope_id', 'filter_scope_id', '', '');
         $state['filter_created_date']       = $app->getUserStateFromRequest($ns.'created_date', 'filter_created_date', '', '');
         $state['filter_expires_date']       = $app->getUserStateFromRequest($ns.'expires_date', 'filter_expires_date', '', '');
         $state['filter_modified_date']       = $app->getUserStateFromRequest($ns.'modified_date', 'filter_modified_date', '', '');

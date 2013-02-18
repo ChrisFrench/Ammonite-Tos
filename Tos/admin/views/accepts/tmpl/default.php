@@ -82,7 +82,7 @@
 					<?php echo $i + 1; ?>
 				</td>
 				<td style="text-align: center;">
-					<?php echo DSCGrid::checkedout( $item, $i, 'scope_id' ); ?>
+					<?php echo DSCGrid::checkedout( $item, $i, 'accept_id' ); ?>
 				</td>
 				<td style="text-align: center;">
 					<a href="<?php echo $item->link; ?>">

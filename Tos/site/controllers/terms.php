@@ -55,22 +55,21 @@ class TosControllerTerms extends TosController
      */
     function display($cachable=false, $urlparams = false)
     {	
-    	$user_id = DSCAcl::validateUser();
+    	
 
         $model  = $this->getModel( $this->get('suffix') );
         $state = $this->_setModelState();
         $id = $model->getId();
         $item = $model->getItem();
-
-      	FB::log( $item);
-     
+    
       	
-      	//if(Tos::getClass('ToshelperTos','helpers.tos')->checkAccepted($item->scope_id)) {
-      	//	  $this->setRedirect(JURI::base(), 'Already Accepted');
-      	//} 
+      	
 
 
         $view = $this->getView( 'terms', 'html' );
+        if(Tos::getClass('ToshelperTos','helpers.tos')->checkAccepted($item->scope_id,null, false)) {
+            $view->assign( 'accepted', 1);
+        } 
         $view->set( '_controller', 'terms' );
         $view->set( '_view', 'terms' );
         $view->set( '_doTask', true);
@@ -84,6 +83,16 @@ class TosControllerTerms extends TosController
         $view->display();
 
 	}
+
+  /**
+     * Displays a single Terms and Condtions form
+     * @see ambra/site/AmbraController#display($cachable)
+     */
+    function view($cachable=false, $urlparams = false)
+    { 
+      
+
+  }
 
 	function accept() {
 		$return = JRequest::getVar('return');

@@ -1,7 +1,7 @@
 cfg.name=tos
 cfg.versionDir=
 cfg.buildDir=packages
-cfg.localhostRoot=../Ammonite-Mirble.com
+cfg.localhostRoot=../crowdfunding.local
 cfg.xmlfile=build.xml
 ftp.server=
 ftp.user=

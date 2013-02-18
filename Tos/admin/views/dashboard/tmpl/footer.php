@@ -26,7 +26,7 @@ defined('_JEXEC') or die('Restricted access'); ?>
 	<tbody>
 	<tr>
 		<td style="text-align: left; width: 33%;">
-				Proudly built by <a href="http:://ammonitenetworks.com" target="_blank">Ammonite Networks</a>, on the <a href="<?php echo $url; ?>" target="_blank">Dioscouri Design</a> Development Library.  
+				Proudly built by <a href="http://ammonitenetworks.com" target="_blank">Ammonite Networks</a>, on the <a href="<?php echo $url; ?>" target="_blank">Dioscouri Design</a> Development Library.  
 		</td>
 		<td style="text-align: center; width: 33%;">
 			<?php echo JText::_( "Tos" ); ?>: <?php echo JText::_( "COM_TOS_DESC" ); ?>

@@ -148,7 +148,7 @@ class TosModelAccepts extends TosModelBase
 	{
 			$item->link = 'index.php?option=com_tos&view=accepts&task=edit&id='.$item->accept_id;
 			
-			parent::prepareItem(&$item, $key, $refresh );
+			parent::prepareItem($item, $key, $refresh );
 	    
 	}
 	

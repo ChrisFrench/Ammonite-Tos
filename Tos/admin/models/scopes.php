@@ -87,7 +87,7 @@ class TosModelScopes extends TosModelBase
     {
       $item->link = 'index.php?option=com_tos&view=scopes&task=edit&id='.$item->scope_id;
             
-            parent::prepareItem(&$item, $key, $refresh );
+            parent::prepareItem($item, $key, $refresh );
         
     }
 

@@ -162,7 +162,7 @@ class TosModelTerms extends TosModelBase
 	{
 			$item->link = 'index.php?option=com_tos&view=terms&task=edit&id='.$item->terms_id;
 			
-			parent::prepareItem(&$item, $key, $refresh );
+			parent::prepareItem($item, $key, $refresh );
 	    
 	}
 	
